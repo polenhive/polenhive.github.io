@@ -1,0 +1,55 @@
+/* ================================================
+   VARIABLES Y ESTILOS BASE
+   Edita los colores y fuentes aquí
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  /* === COLORES PRINCIPALES === */
+  --rosa-fuerte:    #e91e8c;
+  --rosa-medio:     #f472b6;
+  --rosa-claro:     #fce7f3;
+  --morado:         #7c3aed;
+  --morado-claro:   #c084fc;
+  --azul-pastel:    #bae6fd;
+  --blanco:         #ffffff;
+  --gris-suave:     #f5f0f8;
+
+  /* === GRADIENTES === */
+  --grad-header:    linear-gradient(135deg, var(--morado) 0%, var(--rosa-fuerte) 100%);
+  --grad-card:      linear-gradient(135deg, #fff0f8 0%, #f0e8ff 100%);
+  --grad-banner:    linear-gradient(135deg, var(--rosa-medio) 0%, var(--morado-claro) 100%);
+  --grad-hero:      linear-gradient(180deg, #fce7f3 0%, #ede9fe 100%);
+
+  /* === TIPOGRAFÍA === */
+  --fuente-titulo:  'Lilita One', cursive;
+  --fuente-cuerpo:  'Nunito', sans-serif;
+
+  /* === SOMBRAS === */
+  --sombra-card:    0 4px 20px rgba(233, 30, 140, 0.15);
+  --sombra-btn:     0 4px 15px rgba(233, 30, 140, 0.4);
+
+  /* === BORDES === */
+  --radio-card:     20px;
+  --radio-btn:      999px;
+}
+
+/* Reset y base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--fuente-cuerpo);
+  background: var(--gris-suave);
+  color: #3b0764;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--rosa-claro); }
+::-webkit-scrollbar-thumb { background: var(--rosa-medio); border-radius: 99px; }
