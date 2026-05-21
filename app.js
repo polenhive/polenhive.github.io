@@ -104,8 +104,8 @@ function renderPersonajes() {
 
   return `
     <div class="hero" style="background: linear-gradient(180deg, #ede9fe 0%, #fce7f3 100%)">
-      <h1>💜 MEET THE SQUAD 💜</h1>
-      <p>Los personajes que hacen la magia</p>
+      <h1>💜 Conoce al Cast 💜</h1>
+      <p>Las mamus de Nuevo Tigre</p>
     </div>
     <div class="personajes-grid">${cardsHTML}</div>
   `;
