@@ -20,7 +20,7 @@ const SITECONFIG = {
 const COMICS = [
   {
     id: 1,
-    titulo: "¿Quién mueve el mundo? (girls)",
+    titulo: "¿Quién mueve el mundo? Las Chicas (Who Run The World, Girls)",
     capitulo: "Capítulo 1",
     fecha: "10 de mayo, 2026",
     imagen: "./images/cap-01-cover.jpg",
@@ -32,7 +32,7 @@ const COMICS = [
   },
   {
     id: 2,
-    titulo: "voto latino",
+    titulo: "Voto Latino",
     capitulo: "Capítulo 2",
     fecha: "3 de mayo, 2026",
     imagen: "./images/cap-02-cover.jpg",
@@ -44,7 +44,7 @@ const COMICS = [
   },
   {
     id: 3,
-    titulo: "oda al portero",
+    titulo: "Oda al portero (Ode to the Bouncer)",
     capitulo: "Capítulo 3",
     fecha: "26 de abril, 2026",
     imagen: "./images/cap-03-cover.jpg",
@@ -59,23 +59,23 @@ const COMICS = [
 // Personajes — nombres y bios reales
 const PERSONAJES = [
   {
-    nombre: "Kakia Pardo",
+    nombre: "Karla Pardo",
     rol: "Protagonista",
-    descripcion: "Estudiante soñadora que descubre poderes mágicos.",
+    descripcion: "Hola Soy Pola.",
     emoji: "🌙",
     color: "#ff69b4"
   },
   {
     nombre: "Diana Trejo",
     rol: "Mejor amiga",
-    descripcion: "Siempre positiva y llena de energía.",
+    descripcion: "Hola Soy Pola.",
     emoji: "⭐",
     color: "#c084fc"
   },
   {
     nombre: "Máximo Pardo",
     rol: "Misterioso",
-    descripcion: "Nadie sabe de dónde viene, pero todos lo quieren.",
+    descripcion: "Hola Soy Pola.",
     emoji: "🔮",
     color: "#60a5fa"
   }
