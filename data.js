@@ -1,12 +1,14 @@
+//
 // ================================================
 // DATOS DEL SITIO - Edita aquí todo el contenido
 // ================================================
+//
 
-const SITE_CONFIG = {
-  nombre: "CHICA CÓMIC",
-  tagline: "Tu mundo de cómics ✨",
+const SITECONFIG = {
+  nombre: "Todos Los Gatos Son Pardos ✨",
+  tagline: "Cómic web Y2K / coquette",
   discord: "https://discord.gg/chicacomic",
-  anuncio_ticker: [
+  anuncioticker: [
     "🌟 NUEVO CAPÍTULO CADA VIERNES 🌟",
     "💖 ÚNETE A NUESTRO DISCORD 💖",
     "✨ MERCH PRÓXIMAMENTE ✨",
@@ -14,62 +16,68 @@ const SITE_CONFIG = {
   ]
 };
 
+// Capítulos — mantengo ids y slugs para no romper rutas internas
 const COMICS = [
   {
     id: 1,
-    titulo: "Corazón de Lotería",
-    capitulo: "Capítulo 12",
+    titulo: "¿Quién mueve el mundo? (girls)",
+    capitulo: "Capítulo 1",
     fecha: "10 de mayo, 2026",
-    imagen: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&q=80",
-    rating: 3,       // número de corazones (1-5)
-    slug: "corazon-de-loteria",
-    descripcion: "Una historia de amor entre cartas de lotería y destino.",
+    imagen: "./images/cap-01-cover.jpg",
+    // TODO: colocar ./images/cap-01-cover.jpg (recomendado 1200x675)
+    rating: 3,
+    slug: "corazon-de-loteria", // se conserva para compatibilidad
+    descripcion: "introducción",
     paginas: 5
   },
   {
     id: 2,
-    titulo: "Glitter Dreams",
-    capitulo: "Capítulo 11",
+    titulo: "voto latino",
+    capitulo: "Capítulo 2",
     fecha: "3 de mayo, 2026",
-    imagen: "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=400&q=80",
+    imagen: "./images/cap-02-cover.jpg",
+    // TODO: colocar ./images/cap-02-cover.jpg (1200x675)
     rating: 3,
     slug: "glitter-dreams",
-    descripcion: "Donde los sueños brillan más que cualquier diamante.",
+    descripcion: "—",
     paginas: 4
   },
   {
     id: 3,
-    titulo: "Rosa Perfección",
-    capitulo: "Capítulo 10",
+    titulo: "oda al portero",
+    capitulo: "Capítulo 3",
     fecha: "26 de abril, 2026",
-    imagen: "https://images.unsplash.com/photo-1490750967868-88df5691cc8b?w=400&q=80",
+    imagen: "./images/cap-03-cover.jpg",
+    // TODO: colocar ./images/cap-03-cover.jpg (1200x675)
     rating: 3,
     slug: "rosa-perfeccion",
-    descripcion: "La perfección existe, y huele a rosas.",
+    descripcion: "—",
     paginas: 6
   }
 ];
 
+// Personajes — nombres y bios reales
 const PERSONAJES = [
   {
-    nombre: "Luna",
+    nombre: "Kakia Pardo",
     rol: "Protagonista",
     descripcion: "Estudiante soñadora que descubre poderes mágicos.",
     emoji: "🌙",
     color: "#ff69b4"
   },
   {
-    nombre: "Estrella",
+    nombre: "Diana Trejo",
     rol: "Mejor amiga",
     descripcion: "Siempre positiva y llena de energía.",
     emoji: "⭐",
     color: "#c084fc"
   },
   {
-    nombre: "Cosmos",
+    nombre: "Máximo Pardo",
     rol: "Misterioso",
     descripcion: "Nadie sabe de dónde viene, pero todos lo quieren.",
     emoji: "🔮",
     color: "#60a5fa"
   }
 ];
+
