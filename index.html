@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- 
     ================================================
     CHICA CÓMIC - Página principal
     Edita el título y descripción aquí abajo
     ================================================
   -->
-  <title> Todos Los Gatos Son Pardos ✨</title>
-  <meta name="description" content="Tu plataforma de cómics favorita 💖">
+  <title>Todos Los Gatos Son Pardos ✨</title>
+  <meta name="description" content="Tu plataforma de cómics favorita 💖" />
 
   <!-- Estilos - el orden importa -->
-  <link rel="stylesheet" href="variables.css">   <!-- Colores y fuentes -->
-  <link rel="stylesheet" href="components.css">  <!-- Componentes -->
+  <link rel="stylesheet" href="variables.css" />   <!-- Colores y fuentes -->
+  <link rel="stylesheet" href="components.css" />  <!-- Componentes -->
 </head>
 <body>
 
@@ -26,7 +26,7 @@
     <ul class="navbar-nav">
       <li><a href="#" data-pagina="home"       onclick="event.preventDefault(); navegarA('home')">       🗂️ Comic</a></li>
       <li><a href="#" data-pagina="characters" onclick="event.preventDefault(); navegarA('characters')"> 👥 Personajes</a></li>
-      <li><a href="#" data-pagina="library"    onclick="event.preventDefault(); navegarA('library')">    📚 Arte Conceptual </a></li>
+      <li><a href="#" data-pagina="library"    onclick="event.preventDefault(); navegarA('library')">    📚 Arte Conceptual</a></li>
     </ul>
   </nav>
 
@@ -48,9 +48,7 @@
     <div class="ticker-inner" id="ticker-inner"></div>
   </div>
 
-  <!-- Scripts - data primero, luego la app -->
-  <script src="data.js"></script>   <!-- 📝 Edita tu contenido aquí -->
-  <script src="app.js"></script>    <!-- ⚙️ Lógica de la app -->
-
+  <!-- Scripts: usa módulos (app.js importará ./personajes.js) -->
+  <script type="module" src="./app.js"></script>
 </body>
 </html>
