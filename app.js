@@ -1,5 +1,3 @@
-import { personajes } from './personajes.js';
-
 // ================================================
 // LÓGICA PRINCIPAL - Navegación entre páginas
 // ================================================
