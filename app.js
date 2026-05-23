@@ -1,24 +1,72 @@
 import { personajes } from './personajes.js';
 
 // ================================================
-// LÓGICA PRINCIPAL - Navegación entre páginas
+// COMICS
+// ================================================
+
+const COMICS = [
+
+  {
+    id: 1,
+    titulo: 'Todos Los Gatos Son Pardos',
+    capitulo: 'Capítulo 1',
+    fecha: '2026',
+    rating: 5,
+    paginas: 10,
+    imagen: 'img/comic1.jpg'
+  },
+
+  {
+    id: 2,
+    titulo: 'The Reason Why',
+    capitulo: 'Capítulo 2',
+    fecha: '2026',
+    rating: 5,
+    paginas: 12,
+    imagen: 'img/comic2.jpg'
+  },
+
+  {
+    id: 3,
+    titulo: 'Arte Conceptual',
+    capitulo: 'Galería',
+    fecha: '2026',
+    rating: 4,
+    paginas: 8,
+    imagen: 'img/concept.jpg'
+  }
+
+];
+
+// ================================================
+// VARIABLES
 // ================================================
 
 let paginaActual = 'home';
-let comicActual = null;
-let paginaLector = 1;
-let modoLector = 'page';
-let musicaActiva = false;
 
-// ---- INICIALIZACIÓN ----
+let comicActual = null;
+
+let paginaLector = 1;
+
+let modoLector = 'page';
+
+// ================================================
+// INICIO
+// ================================================
 
 document.addEventListener('DOMContentLoaded', () => {
+
   renderTicker();
+
   renderStickers();
+
   navegarA('home');
+
 });
 
-// ---- NAVEGACIÓN ----
+// ================================================
+// NAVEGACIÓN
+// ================================================
 
 function navegarA(pagina, datos = null) {
 
@@ -28,7 +76,9 @@ function navegarA(pagina, datos = null) {
     document.getElementById('app');
 
   app.style.opacity = '0';
-  app.style.transform = 'translateY(10px)';
+
+  app.style.transform =
+    'translateY(10px)';
 
   setTimeout(() => {
 
@@ -60,56 +110,17 @@ function navegarA(pagina, datos = null) {
 
     app.style.opacity = '1';
 
-    app.style.transform = 'translateY(0)';
-
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    app.style.transform =
+      'translateY(0)';
 
   }, 150);
 }
 
-// ---- HOME ----
+// ================================================
+// HOME
+// ================================================
 
 function renderHome() {
-
-  if (typeof COMICS === 'undefined') {
-
-    return `
-      <div class="hero">
-        <h1>✨ Todos Los Gatos Son Pardos ✨</h1>
-        <p>Tu webcomic aesthetic 💖</p>
-      </div>
-
-      <div class="banner-grid">
-
-        <div
-          class="banner-card characters"
-          onclick="navegarA('characters')"
-        >
-
-          <span class="banner-card-icon">
-            👥
-          </span>
-
-          <div>
-
-            <div class="banner-card-titulo">
-              PERSONAJES
-            </div>
-
-            <div class="banner-card-sub">
-              Conoce al cast ✨
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    `;
-  }
 
   const cardsHTML = COMICS.map(c => `
 
@@ -160,14 +171,20 @@ function renderHome() {
 
     <div class="hero">
 
-      <h1>✨ Últimos Capítulos ✨</h1>
+      <h1>
+        ✨ Últimos Capítulos ✨
+      </h1>
 
-      <p>Nuevos cómics cada viernes 💖</p>
+      <p>
+        Nuevos cómics cada viernes 💖
+      </p>
 
     </div>
 
     <div class="comics-grid">
+
       ${cardsHTML}
+
     </div>
 
     <div class="banner-grid">
@@ -219,10 +236,13 @@ function renderHome() {
       </div>
 
     </div>
+
   `;
 }
 
-// ---- PERSONAJES ----
+// ================================================
+// PERSONAJES
+// ================================================
 
 function renderPersonajes() {
 
@@ -273,9 +293,13 @@ function renderPersonajes() {
       "
     >
 
-      <h1>💜 Conoce al Cast 💜</h1>
+      <h1>
+        💜 Conoce al Cast 💜
+      </h1>
 
-      <p>Las mamus de Nuevo Tigre</p>
+      <p>
+        Las mamus de Nuevo Tigre
+      </p>
 
     </div>
 
@@ -323,10 +347,13 @@ function renderPersonajes() {
       </div>
 
     </div>
+
   `;
 }
 
-// ---- MODAL ----
+// ================================================
+// MODAL
+// ================================================
 
 function openModal(nombre) {
 
@@ -373,13 +400,11 @@ function closeModal() {
     .classList.remove('open');
 }
 
-// ---- LIBRERÍA ----
+// ================================================
+// LIBRERÍA
+// ================================================
 
 function renderLibreria() {
-
-  if (typeof COMICS === 'undefined') {
-    return '';
-  }
 
   const itemsHTML = COMICS.map((c, i) => `
 
@@ -404,6 +429,8 @@ function renderLibreria() {
 
       </div>
 
+      <span>📖</span>
+
     </div>
 
   `).join('');
@@ -412,7 +439,13 @@ function renderLibreria() {
 
     <div class="hero">
 
-      <h1>📚 LIBRERÍA</h1>
+      <h1>
+        📚 LIBRERÍA
+      </h1>
+
+      <p>
+        Todos los volúmenes y archivos
+      </p>
 
     </div>
 
@@ -425,13 +458,11 @@ function renderLibreria() {
   `;
 }
 
-// ---- LECTOR ----
+// ================================================
+// LECTOR
+// ================================================
 
 function renderLector(comicId) {
-
-  if (typeof COMICS === 'undefined') {
-    return '';
-  }
 
   const comic =
     COMICS.find(c => c.id === comicId)
@@ -442,28 +473,25 @@ function renderLector(comicId) {
   paginaLector = 1;
 
   return `
+
     <div class="hero">
 
-      <h1>${comic.titulo}</h1>
+      <h1>
+        ${comic.titulo}
+      </h1>
 
-      <p>${comic.capitulo}</p>
+      <p>
+        ${comic.capitulo}
+      </p>
 
     </div>
+
   `;
 }
 
-// ---- CAMBIO DE MODO ----
-
-function cambiarModo(modo) {
-
-  modoLector = modo;
-
-  if (comicActual) {
-    navegarA('lector', comicActual.id);
-  }
-}
-
-// ---- TICKER ----
+// ================================================
+// TICKER
+// ================================================
 
 function renderTicker() {
 
@@ -493,26 +521,30 @@ function renderTicker() {
       .join('');
 }
 
-// ---- STICKERS ----
+// ================================================
+// STICKERS
+// ================================================
 
 function renderStickers() {
 
   const stickers = [
+
     '🎀',
     '🌸',
     '💖',
     '🦋'
+
   ];
 
   const posiciones = [
 
-    { left: '3%', top: '20%', delay: '0s' },
+    { left: '3%', top: '20%' },
 
-    { right: '3%', top: '30%', delay: '1s' },
+    { right: '3%', top: '30%' },
 
-    { left: '4%', bottom: '20%', delay: '2s' },
+    { left: '4%', bottom: '20%' },
 
-    { right: '4%', bottom: '25%', delay: '0.5s' },
+    { right: '4%', bottom: '25%' }
 
   ];
 
@@ -531,27 +563,16 @@ function renderStickers() {
     el.textContent =
       stickers[i % stickers.length];
 
-    el.style.cssText =
-
-      Object.entries(pos)
-
-        .map(([k, v]) => {
-
-          if (k === 'delay') {
-            return `animation-delay:${v}`;
-          }
-
-          return `${k}:${v}`;
-
-        })
-
-        .join(';');
+    Object.assign(el.style, pos);
 
     container.appendChild(el);
+
   });
 }
 
-// ---- NAVBAR ----
+// ================================================
+// NAVBAR
+// ================================================
 
 function actualizarNavActivo() {
 
@@ -562,7 +583,9 @@ function actualizarNavActivo() {
 
       a.classList.remove('activo');
 
-      if (a.dataset.pagina === paginaActual) {
+      if (
+        a.dataset.pagina === paginaActual
+      ) {
         a.classList.add('activo');
       }
 
