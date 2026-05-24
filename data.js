@@ -95,7 +95,7 @@ Y aunque parecía el tipo de momento que rompería cualquier posibilidad de amis
     nombre: "Diana Trejo",
     nombre_completo: "Diana Trejo",
     rol: "Mejor amiga",
-    subtitulo: "La mejor amiga con ojo de modista",
+    subtitulo: "La copiloto del desastre",
     img: "img/Diana.png",
     facts: [
       "Edad: 17",
@@ -115,7 +115,7 @@ Y aunque parecía el tipo de momento que rompería cualquier posibilidad de amis
     nombre: "Máximo Pardo",
     nombre_completo: "Máximo Pardo",
     rol: "Candidato / influencer",
-    subtitulo: "El candidato perfecto",
+    subtitulo: "El NepoKitty Presidencial",
     img: "img/Maximo.png",
     facts: [
       "Edad: 22",
