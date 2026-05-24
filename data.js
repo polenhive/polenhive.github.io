@@ -1,16 +1,14 @@
-Va, este es tu `data.js` listo para copiar y pegar completo:
-
-```js
 //
 // ================================================
-// DATOS DEL SITIO - Edita aquí todo el contenido
+// DATOS DEL SITIO
 // ================================================
 //
 
 const SITE_CONFIG = {
   nombre: "Todos Los Gatos Son Pardos ✨",
-  
-    "🎀 SÍGUEMe EN INSTAGRAM @POLENHIVE 🎀"
+  tagline: "Cómic web Y2K / coquette",
+  anuncio_ticker: [
+    "🎀 SÍGUEME EN INSTAGRAM @POLENHIVE 🎀"
   ]
 };
 
@@ -22,6 +20,14 @@ const COMICS = [
     imagen: "img/cap-01-cover.jpg",
     slug: "quien-mueve-al-mundo-las-chicas",
     descripcion: "El inicio de Todos Los Gatos Son Pardos.",
+    paginas: [
+      "img/quien-mueve-al-mundo-las-chicas/01.jpg",
+      "img/quien-mueve-al-mundo-las-chicas/02.jpg",
+      "img/quien-mueve-al-mundo-las-chicas/03.jpg",
+      "img/quien-mueve-al-mundo-las-chicas/04.jpg",
+      "img/quien-mueve-al-mundo-las-chicas/05.jpg"
+    ],
+    multimedia: []
   },
   {
     id: 2,
@@ -30,6 +36,13 @@ const COMICS = [
     imagen: "img/cap-02-cover.jpg",
     slug: "voto-latino",
     descripcion: "El drama político empieza a hervir en Nuevo Tigre.",
+    paginas: [
+      "img/voto-latino/01.jpg",
+      "img/voto-latino/02.jpg",
+      "img/voto-latino/03.jpg",
+      "img/voto-latino/04.jpg"
+    ],
+    multimedia: []
   },
   {
     id: 3,
@@ -38,6 +51,15 @@ const COMICS = [
     imagen: "img/cap-03-cover.jpg",
     slug: "oda-al-portero",
     descripcion: "Por fin conocemos la Marmota, y las chicas tienen demasiadas ganas de entrar.",
+    paginas: [
+      "img/oda-al-portero/01.jpg",
+      "img/oda-al-portero/02.jpg",
+      "img/oda-al-portero/03.jpg",
+      "img/oda-al-portero/04.jpg",
+      "img/oda-al-portero/05.jpg",
+      "img/oda-al-portero/06.jpg"
+    ],
+    multimedia: []
   }
 ];
 
@@ -49,7 +71,6 @@ const PERSONAJES = [
     rol: "Protagonista",
     subtitulo: "La princesa de Nuevo Tigre",
     img: "img/Karla.png",
-    color: "#ff69b4",
     facts: [
       "Edad: 17",
       "Ocupación: Estudiante de la Preparatoria Altavira",
@@ -67,7 +88,7 @@ Con Diana no siempre todo fue miel sobre hojuelas. A finales de su primer año d
 
 Karla y Diana estaban decididas a ganar… pero al final, la corona terminó en manos de una tal Becky Valderrama.
 
-Y aunque parecía el tipo de momento que rompería cualquier posibilidad de amistad, pasó todo lo contrario. Después de perder, la rivalidad se apagó y entre ellas nació una conexión inesperada. Desde entonces, Diana se convirtió en la persona de confianza de Karla: la acompaña a todos lados, le da opiniones honestas aunque a veces no quiera escucharlas, y es quien la baja a la tierra cuando “se le sube lo Pardo”.`
+Y aunque parecía el tipo de momento que rompería cualquier posibilidad de amistad, pasó todo lo contrario. Después de perder, la rivalidad se apagó y entre ellas nació una conexión inesperada. Desde entonces, Diana se convirtió en la persona de confianza de Karla.`
   },
   {
     id: "diana",
@@ -76,7 +97,6 @@ Y aunque parecía el tipo de momento que rompería cualquier posibilidad de amis
     rol: "Mejor amiga",
     subtitulo: "La mejor amiga con ojo de modista",
     img: "img/Diana.png",
-    color: "#c084fc",
     facts: [
       "Edad: 17",
       "Ocupación: Estudiante de la Preparatoria Altavira",
@@ -87,12 +107,8 @@ Y aunque parecía el tipo de momento que rompería cualquier posibilidad de amis
       "Interés: Moda",
       "Relaciones: Karla Pardo (Mejor amiga), Máximo Pardo (crush imposible), Familia Trejo (Padres)"
     ],
-    bio: `Diana siempre ha tenido buen ojo para la moda. Desde pequeña le gustaba combinar ropa, arreglar prendas viejas y dibujar vestidos en las esquinas de sus cuadernos. Sueña con algún día convertirse en una gran modista y tener su propia marca, aunque sabe que no será fácil. Sus padres son estrictos y esperan que continúe trabajando en el negocio familiar: un almacén de frutas que ha pasado de generación en generación.
-
-La escuela y su amistad con Karla se han convertido en un pequeño espacio de libertad donde puede ser ella misma. A diferencia de Karla, Diana suele ser más tranquila y aterrizada aunque no tiene problema en decir verdades incómodas cuando hace falta.
-
-Desde hace tiempo tiene un crush con Máximo Pardo, el medio hermano de Karla. Cree que es muy buena disimulando, pero en realidad se pone nerviosa cada vez que él aparece cerca.`,
-    extra: ""
+    bio: `Diana siempre ha tenido buen ojo para la moda. Desde pequeña le gustaba combinar ropa, arreglar prendas viejas y dibujar vestidos en las esquinas de sus cuadernos. Sueña con algún día convertirse en una gran modista y tener su propia marca.`,
+    extra: `Desde hace tiempo tiene un crush con Máximo Pardo, el medio hermano de Karla. Cree que es muy buena disimulando, pero en realidad se pone nerviosa cada vez que él aparece cerca.`
   },
   {
     id: "maximo",
@@ -101,7 +117,6 @@ Desde hace tiempo tiene un crush con Máximo Pardo, el medio hermano de Karla. C
     rol: "Candidato / influencer",
     subtitulo: "El candidato perfecto",
     img: "img/Maximo.png",
-    color: "#60a5fa",
     facts: [
       "Edad: 22",
       "Ocupación: Candidato a la presidencia municipal de Nuevo Tigre",
@@ -112,14 +127,8 @@ Desde hace tiempo tiene un crush con Máximo Pardo, el medio hermano de Karla. C
       "Intereses: fútbol, redes sociales",
       "Relaciones: Heriberto Pardo (padre), Rufino Pardo (medio hermano), Karla Pardo (media hermana), Katarzyna Mucek (madrastra), Diana Trejo (mejor amiga de Karla)"
     ],
-    bio: `Máximo siempre quiso ser futbolista. Desde niño soñaba con debutar profesionalmente, pero su padre, Heriberto Pardo, le repetía que “eso es para la prole” y lo empujó a seguir la tradición familiar: la política.
-
-Hoy es el candidato joven del momento: carismático, atractivo y experto en convertir cualquier aparición pública en contenido viral. Está más preocupado por encontrar el ángulo perfecto para un live que por memorizar el reglamento municipal. Habla en eslóganes, posa en cada evento y parece vivir permanentemente en campaña.
-
-Gracias a su encanto en pantalla, acumula más de un millón de seguidores en Meowstagram. Mientras los medios más serios lo critican por su fama de party boy superficial, el mundo del espectáculo lo adora. Sale en revistas, aparece en fiestas exclusivas y siempre encuentra la manera de escapar de los escándalos con una sonrisa perfectamente ensayada.
-
-Pero detrás de toda esa imagen pública, Máximo vive atrapado entre expectativas que nunca eligió. Aunque jamás lo admitiría en voz alta, su padre lo intimida más de lo que inspira. Frente a Heriberto, Máximo vuelve a sentirse como el niño al que le dijeron que sus sueños no eran suficientes.`,
-    extra: ""
+    bio: `Máximo siempre quiso ser futbolista. Desde niño soñaba con debutar profesionalmente, pero su padre, Heriberto Pardo, le repetía que “eso es para la prole” y lo empujó a seguir la tradición familiar: la política.`,
+    extra: `Hoy es el candidato joven del momento: carismático, atractivo y experto en convertir cualquier aparición pública en contenido viral. Pero detrás de toda esa imagen pública, Máximo vive atrapado entre expectativas que nunca eligió.`
   }
 ];
 
@@ -161,7 +170,3 @@ const EXTRAS = {
     }
   ]
 };
-```
-
-
-
