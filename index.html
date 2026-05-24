@@ -1,54 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- 
-    ================================================
-    CHICA CÓMIC - Página principal
-    Edita el título y descripción aquí abajo
-    ================================================
-  -->
-  <title>Todos Los Gatos Son Pardos ✨</title>
-  <meta name="description" content="Tu plataforma de cómics favorita 💖" />
 
-  <!-- Estilos - el orden importa -->
-  <link rel="stylesheet" href="variables.css" />   <!-- Colores y fuentes -->
-  <link rel="stylesheet" href="components.css" />  <!-- Componentes -->
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Todos Los Gatos Son Pardos ✨
+  </title>
+
+  <meta
+    name="description"
+    content="Webcomic Y2K / coquette"
+  />
+
+  <!-- ESTILOS -->
+
+  <link
+    rel="stylesheet"
+    href="variables.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="components.css"
+  />
+
 </head>
+
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- ===================================== -->
+  <!-- NAVBAR -->
+  <!-- ===================================== -->
+
   <nav class="navbar">
-    <div class="navbar-logo" onclick="navegarA('home')" style="cursor:pointer">
+
+    <div
+      class="navbar-logo"
+      onclick="navegarA('home')"
+      style="cursor:pointer"
+    >
       ✨ Todos Los Gatos Son Pardos ✨
     </div>
+
     <ul class="navbar-nav">
-      <li><a href="#" data-pagina="home"       onclick="event.preventDefault(); navegarA('home')">       🗂️ Comic</a></li>
-      <li><a href="#" data-pagina="characters" onclick="event.preventDefault(); navegarA('characters')"> 👥 Personajes</a></li>
-      <li><a href="#" data-pagina="library"    onclick="event.preventDefault(); navegarA('library')">    📚 Arte Conceptual</a></li>
+
+      <li>
+
+        <a
+          href="#"
+
+          data-pagina="home"
+
+          onclick="
+            event.preventDefault();
+            navegarA('home')
+          "
+        >
+          🗂️ Comic
+        </a>
+
+      </li>
+
+      <li>
+
+        <a
+          href="#"
+
+          data-pagina="characters"
+
+          onclick="
+            event.preventDefault();
+            navegarA('characters')
+          "
+        >
+          👥 Personajes
+        </a>
+
+      </li>
+
+      <li>
+
+        <a
+          href="#"
+
+          data-pagina="library"
+
+          onclick="
+            event.preventDefault();
+            navegarA('library')
+          "
+        >
+          🎀 Extras
+        </a>
+
+      </li>
+
     </ul>
+
   </nav>
 
-  <!-- ===== CONTENIDO PRINCIPAL ===== -->
-  <main id="app" style="padding-bottom: 4rem; min-height: calc(100vh - 80px)">
-    <!-- El contenido se inyecta aquí por JavaScript -->
+  <!-- ===================================== -->
+  <!-- CONTENIDO -->
+  <!-- ===================================== -->
+
+  <main
+    id="app"
+
+    style="
+      padding-bottom:4rem;
+      min-height:calc(100vh - 80px)
+    "
+  >
+
   </main>
 
-  <!-- ===== STICKERS FLOTANTES ===== -->
-  <div id="stickers" aria-hidden="true"></div>
+  <!-- ===================================== -->
+  <!-- STICKERS -->
+  <!-- ===================================== -->
 
-  <!-- ===== BOTÓN MÚSICA ===== -->
-  <button class="btn-musica" onclick="toggleMusica()">
-    <span id="btn-musica-texto">🎵 Music OFF</span>
+  <div
+    id="stickers"
+    aria-hidden="true"
+  ></div>
+
+  <!-- ===================================== -->
+  <!-- BOTÓN MÚSICA -->
+  <!-- ===================================== -->
+
+  <button
+    class="btn-musica"
+    onclick="toggleMusica()"
+  >
+
+    <span id="btn-musica-texto">
+      🎵 Music OFF
+    </span>
+
   </button>
 
-  <!-- ===== TICKER INFERIOR ===== -->
-  <div class="ticker-wrap" aria-hidden="true">
-    <div class="ticker-inner" id="ticker-inner"></div>
+  <!-- ===================================== -->
+  <!-- TICKER -->
+  <!-- ===================================== -->
+
+  <div
+    class="ticker-wrap"
+    aria-hidden="true"
+  >
+
+    <div
+      class="ticker-inner"
+      id="ticker-inner"
+    ></div>
+
   </div>
 
-  <!-- Scripts: usa módulos (app.js importará ./personajes.js) -->
-  <script type="module" src="./app.js"></script>
+  <!-- ===================================== -->
+  <!-- SCRIPTS -->
+  <!-- ===================================== -->
+
+  <script src="./data.js"></script>
+
+  <script src="./app.js"></script>
+
 </body>
 </html>
