@@ -840,3 +840,457 @@ body {
     height: 300px;
   }
 }
+
+/* =========================================
+   Y2K GIRLY UPGRADE
+========================================= */
+
+body {
+  background:
+    linear-gradient(
+      180deg,
+      #fff0f8 0%,
+      #ffe0f2 40%,
+      #fff7fb 100%
+    );
+
+  background-attachment: fixed;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+  background:
+    linear-gradient(
+      90deg,
+      #ff1493 0%,
+      #ff4fc3 35%,
+      #c026d3 100%
+    );
+
+  border-bottom: 4px solid #ffd700;
+
+  box-shadow:
+    0 6px 20px rgba(255,20,147,0.35),
+    inset 0 -2px 0 rgba(255,255,255,0.35);
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 900;
+
+  color: white;
+
+  text-shadow:
+    3px 3px 0 #ff1493,
+    0 0 10px rgba(255,255,255,0.9);
+}
+
+/* Pardo dorado SOLO en logo */
+
+.navbar-logo::after {
+  content: "";
+}
+
+/* ===== BOTONES NAV ===== */
+
+.navbar-nav a {
+  background:
+    linear-gradient(
+      180deg,
+      #fff 0%,
+      #ffe6f8 100%
+    );
+
+  border: 2px solid #ff8bd6;
+
+  border-radius: 999px;
+
+  color: #7c3aed;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 4px 10px rgba(255,20,147,0.15);
+
+  transition: 0.25s ease;
+}
+
+.navbar-nav a:hover {
+  transform: translateY(-3px) scale(1.03);
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff7fd 0%,
+      #ffd3ef 100%
+    );
+
+  box-shadow:
+    0 10px 20px rgba(255,20,147,0.25);
+}
+
+.navbar-nav a.activo {
+  background:
+    linear-gradient(
+      180deg,
+      #ff1493 0%,
+      #ff4fc3 100%
+    );
+
+  color: white;
+
+  border-color: #ffd700;
+
+  box-shadow:
+    0 0 15px rgba(255,215,0,0.6);
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.7) 0%,
+      rgba(255,220,245,0.7) 100%
+    );
+
+  border-bottom:
+    3px solid rgba(255,20,147,0.2);
+
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+
+  color: #7c3aed;
+
+  text-shadow:
+    2px 2px 0 white,
+    0 0 10px rgba(255,20,147,0.3);
+}
+
+.hero p {
+  color: #ff1493;
+  font-weight: 700;
+}
+
+/* ===== COMIC CARDS ===== */
+
+.comic-card {
+  background:
+    linear-gradient(
+      180deg,
+      #fff 0%,
+      #ffe6f8 100%
+    );
+
+  border:
+    3px solid #ffc7ea;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  box-shadow:
+    0 10px 25px rgba(255,20,147,0.12);
+
+  transition: 0.25s ease;
+}
+
+.comic-card:hover {
+  transform:
+    translateY(-8px)
+    rotate(-1deg);
+
+  box-shadow:
+    0 20px 35px rgba(255,20,147,0.25);
+}
+
+.comic-card::before {
+  content: "♡";
+
+  position: absolute;
+
+  top: 12px;
+  right: 16px;
+
+  font-size: 1.5rem;
+
+  color: #ff1493;
+
+  z-index: 10;
+}
+
+.comic-card img {
+  border-bottom:
+    3px solid #ffd3ef;
+}
+
+.comic-card-titulo {
+  font-size: 1.5rem;
+  font-weight: 900;
+
+  color: #7c3aed;
+
+  text-shadow:
+    1px 1px 0 white;
+}
+
+/* ===== PERSONAJES ===== */
+
+.personaje-card {
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #ffe8f7 100%
+    );
+
+  border:
+    3px solid #ffd3ef;
+
+  border-radius: 30px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 25px rgba(255,20,147,0.12);
+
+  transition: 0.25s ease;
+}
+
+.personaje-card:hover {
+  transform:
+    translateY(-10px)
+    scale(1.03);
+
+  box-shadow:
+    0 20px 40px rgba(255,20,147,0.25);
+}
+
+.personaje-card::before {
+  content: "✦";
+
+  position: absolute;
+
+  top: 15px;
+  right: 18px;
+
+  font-size: 1.5rem;
+
+  color: #ffd700;
+
+  text-shadow:
+    0 0 8px white;
+}
+
+.personaje-card img {
+  filter:
+    drop-shadow(0 10px 12px rgba(0,0,0,0.12));
+}
+
+.personaje-nombre {
+  font-size: 2rem;
+  font-weight: 900;
+
+  color: #7c3aed;
+
+  text-shadow:
+    2px 2px 0 white;
+}
+
+/* ===== PALABRA PARDO DORADA ===== */
+
+.personaje-nombre {
+  position: relative;
+}
+
+.personaje-nombre::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+/* ===== SUBTEXTO ===== */
+
+.personaje-rol {
+  color: #ff1493;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* ===== MODAL ===== */
+
+.modal-content {
+  background:
+    linear-gradient(
+      180deg,
+      #fff 0%,
+      #ffeef9 100%
+    );
+
+  border:
+    4px solid #ffb3e3;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 25px 50px rgba(255,20,147,0.3);
+
+  position: relative;
+}
+
+.modal-content::before {
+  content: "♡ profile ♡";
+
+  position: absolute;
+
+  top: 1rem;
+  left: 1.5rem;
+
+  background: #ff1493;
+
+  color: white;
+
+  padding:
+    0.35rem 1rem;
+
+  border-radius: 999px;
+
+  font-weight: 900;
+
+  box-shadow:
+    4px 4px 0 #ffd700;
+}
+
+.modal-content h2 {
+  color: #7c3aed;
+
+  font-size: 2.5rem;
+
+  text-shadow:
+    2px 2px 0 white;
+}
+
+#facts p {
+  background: #fff7fd;
+
+  border:
+    2px dashed #ff9ad5;
+
+  border-radius: 16px;
+
+  padding:
+    0.7rem 1rem;
+
+  margin:
+    0.6rem 0;
+
+  color: #7c3aed;
+
+  font-weight: 700;
+}
+
+/* ===== EXTRAS ===== */
+
+.extra-card {
+  background:
+    linear-gradient(
+      180deg,
+      #fff 0%,
+      #ffe6f8 100%
+    );
+
+  border:
+    3px solid #ffd3ef;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  transition: 0.25s ease;
+
+  box-shadow:
+    0 10px 25px rgba(255,20,147,0.15);
+}
+
+.extra-card:hover {
+  transform:
+    scale(1.04)
+    rotate(-1deg);
+}
+
+/* ===== TICKER ===== */
+
+.ticker-wrap {
+  background:
+    linear-gradient(
+      90deg,
+      #7c3aed 0%,
+      #ff1493 100%
+    );
+
+  border-top:
+    3px solid #ffd700;
+}
+
+.ticker-inner span {
+  color: white;
+
+  font-weight: 900;
+
+  text-shadow:
+    1px 1px 0 rgba(0,0,0,0.2);
+}
+
+/* ===== MUSIC BUTTON ===== */
+
+.btn-musica {
+  background:
+    linear-gradient(
+      180deg,
+      #ff1493 0%,
+      #ff4fc3 100%
+    );
+
+  border:
+    3px solid #ffd700;
+
+  border-radius: 999px;
+
+  color: white;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 10px 25px rgba(255,20,147,0.3);
+
+  transition: 0.25s ease;
+}
+
+.btn-musica:hover {
+  transform:
+    scale(1.06);
+
+  box-shadow:
+    0 15px 35px rgba(255,20,147,0.45);
+}
+
+/* ===== STICKERS ===== */
+
+.sticker {
+  filter:
+    drop-shadow(0 0 10px rgba(255,255,255,0.8));
+
+  opacity: 0.85;
+}
