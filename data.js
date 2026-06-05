@@ -6,7 +6,6 @@
 
 const SITE_CONFIG = {
   nombre: "Todos Los Gatos Son Pardos ✨",
-  tagline: "Cómic web Y2K / coquette",
   anuncio_ticker: [
     "🎀 SÍGUEME EN INSTAGRAM @POLENHIVE 🎀"
   ]
