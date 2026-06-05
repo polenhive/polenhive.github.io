@@ -44,12 +44,17 @@ const COMICS = [
     imagen: "img/cap-02-cover.jpg",
     slug: "voto-latino",
     descripcion: "El drama político empieza a hervir en Nuevo Tigre.",
-    paginas: [
-      "img/voto-latino/01.jpg",
-      "img/voto-latino/02.jpg",
-      "img/voto-latino/03.jpg",
-      "img/voto-latino/04.jpg"
-    ],
+   paginas: [
+  "img/voto-latino/01.jpg",
+  "img/voto-latino/02.jpg",
+  "img/voto-latino/03.jpg",
+  "img/voto-latino/04.jpg",
+  "img/voto-latino/05.jpg",
+  "img/voto-latino/06.jpg",
+  "img/voto-latino/07.jpg",
+  "img/voto-latino/08.jpg",
+  "img/voto-latino/09.jpg"
+],
     multimedia: []
   },
   {
