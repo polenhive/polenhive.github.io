@@ -170,16 +170,14 @@ function closeModal() {
 function renderArteConceptual() {
   const arteHTML = EXTRAS.arteConceptual.map(a => `
     <div class="extra-card">
-      <img src="${a.img}" alt="${a.titulo}">
-      <h3>${a.titulo}</h3>
-      <p>${a.descripcion}</p>
+      <img src="${a.img}" alt="Arte conceptual">
     </div>
   `).join('');
 
   return `
     <div class="hero">
       <h1>🎨 Arte Conceptual 🎨</h1>
-      <p>Diseños, exploraciones visuales y material del mundo de Nuevo Tigre.</p>
+      <p>Galería de desarrollo visual de Todos Los Gatos Son Pardos.</p>
     </div>
 
     <div class="extras-grid">
@@ -187,7 +185,6 @@ function renderArteConceptual() {
     </div>
   `;
 }
-
 // ================================================
 // SOBRE EL PROYECTO
 // ================================================
