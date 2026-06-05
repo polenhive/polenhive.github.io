@@ -169,7 +169,7 @@ function closeModal() {
 
 function renderArteConceptual() {
   const arteHTML = EXTRAS.arteConceptual.map(a => `
-    <div class="extra-card">
+   <div class="galeria-concepts">
       <img src="${a.img}" alt="Arte conceptual">
     </div>
   `).join('');
