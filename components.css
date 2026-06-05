@@ -1402,3 +1402,24 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.galeria-concepts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.galeria-concepts .extra-card {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.galeria-concepts img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
