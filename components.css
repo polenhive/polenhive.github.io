@@ -1294,3 +1294,71 @@ body {
 
   opacity: 0.85;
 }
+
+.page-number {
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 30px;
+  color: #ff69b4;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+.btn-zoom {
+  margin-bottom: 12px;
+  border: 2px solid #ff9ad5;
+  background: #fff0fa;
+  color: #ff4faf;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lector-nav-botones {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.zoom-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 210, 240, 0.92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.zoom-modal.open {
+  display: flex;
+}
+
+.zoom-modal img {
+  max-width: 95vw;
+  max-height: 92vh;
+  border-radius: 18px;
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.6);
+}
+
+.zoom-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: #ff69b4;
+  color: white;
+  border-radius: 999px;
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  cursor: pointer;
+}
