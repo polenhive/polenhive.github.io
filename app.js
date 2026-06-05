@@ -29,8 +29,11 @@ function navegarA(pagina, datos = null) {
       case 'characters':
         app.innerHTML = renderPersonajes();
         break;
-      case 'library':
-        app.innerHTML = renderExtras();
+      case 'art':
+        app.innerHTML = renderArteConceptual();
+        break;
+      case 'about':
+        app.innerHTML = renderSobreProyecto();
         break;
       case 'lector':
         app.innerHTML = renderLector(datos);
@@ -161,10 +164,10 @@ function closeModal() {
 }
 
 // ================================================
-// EXTRAS
+// ARTE CONCEPTUAL
 // ================================================
 
-function renderExtras() {
+function renderArteConceptual() {
   const arteHTML = EXTRAS.arteConceptual.map(a => `
     <div class="extra-card">
       <img src="${a.img}" alt="${a.titulo}">
@@ -173,6 +176,23 @@ function renderExtras() {
     </div>
   `).join('');
 
+  return `
+    <div class="hero">
+      <h1>🎨 Arte Conceptual 🎨</h1>
+      <p>Diseños, exploraciones visuales y material del mundo de Nuevo Tigre.</p>
+    </div>
+
+    <div class="extras-grid">
+      ${arteHTML}
+    </div>
+  `;
+}
+
+// ================================================
+// SOBRE EL PROYECTO
+// ================================================
+
+function renderSobreProyecto() {
   const proyectosHTML = (EXTRAS.proyectosSimilares || []).map(p => `
     <div class="extra-card">
       <img src="${p.img}" alt="${p.titulo}">
@@ -183,13 +203,8 @@ function renderExtras() {
 
   return `
     <div class="hero">
-      <h1>🎀 Extras 🎀</h1>
-      <p>Arte conceptual, contacto y proyectos similares</p>
-    </div>
-
-    <div class="seccion-titulo">Arte conceptual</div>
-    <div class="extras-grid">
-      ${arteHTML}
+      <h1>💌 Sobre el Proyecto 💌</h1>
+      <p>Todo sobre Todos Los Gatos Son Pardos y su autora.</p>
     </div>
 
     <div class="contacto-box">
@@ -203,7 +218,7 @@ function renderExtras() {
       <p>${EXTRAS.autora.linkedin}</p>
     </div>
 
-    <div class="seccion-titulo">Proyectos similares</div>
+    <div class="seccion-titulo">Proyectos relacionados</div>
     <div class="extras-grid">
       ${proyectosHTML}
     </div>
