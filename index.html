@@ -51,12 +51,9 @@
     <ul class="navbar-nav">
 
       <li>
-
         <a
           href="#"
-
           data-pagina="home"
-
           onclick="
             event.preventDefault();
             navegarA('home')
@@ -64,16 +61,12 @@
         >
           🗂️ Comic
         </a>
-
       </li>
 
       <li>
-
         <a
           href="#"
-
           data-pagina="characters"
-
           onclick="
             event.preventDefault();
             navegarA('characters')
@@ -81,24 +74,32 @@
         >
           👥 Personajes
         </a>
-
       </li>
 
       <li>
-
         <a
           href="#"
-
-          data-pagina="library"
-
+          data-pagina="art"
           onclick="
             event.preventDefault();
-            navegarA('library')
+            navegarA('art')
           "
         >
-          🎀 Extras
+          🎨 Arte Conceptual
         </a>
+      </li>
 
+      <li>
+        <a
+          href="#"
+          data-pagina="about"
+          onclick="
+            event.preventDefault();
+            navegarA('about')
+          "
+        >
+          💌 Sobre el Proyecto
+        </a>
       </li>
 
     </ul>
@@ -111,7 +112,6 @@
 
   <main
     id="app"
-
     style="
       padding-bottom:4rem;
       min-height:calc(100vh - 80px)
