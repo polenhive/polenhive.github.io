@@ -195,21 +195,27 @@ function renderArteConceptual() {
 // ================================================
 
 function renderSobreProyecto() {
-  const proyectosHTML = (EXTRAS.proyectosSimilares || []).map(p => `
-    <div class="extra-card">
-      <img src="${p.img}" alt="${p.titulo}">
-      <h3>${p.titulo}</h3>
-      <p>${p.descripcion}</p>
-    </div>
-  `).join('');
-
+ function renderSobreProyecto() {
   return `
     <div class="hero">
       <h1>💌 Sobre el Proyecto 💌</h1>
       <p>Todo sobre Todos Los Gatos Son Pardos y su autora.</p>
     </div>
 
-    <div class="contacto-box">
+    <section class="about-video-section">
+      <h2>🎥 ¿Por qué hice este proyecto?</h2>
+
+      <video controls class="about-video">
+        <source src="img/sobre-video.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+    </section>
+
+    <section class="about-logo-section">
+      <img src="img/logo.png" alt="Logo Todos Los Gatos Son Pardos" class="about-logo">
+    </section>
+
+    <section class="about-card">
       <h2>Sobre el proyecto</h2>
       <p>${EXTRAS.autora.texto}</p>
 
@@ -218,12 +224,7 @@ function renderSobreProyecto() {
       <p>${EXTRAS.autora.usuario}</p>
       <p>${EXTRAS.autora.email}</p>
       <p>${EXTRAS.autora.linkedin}</p>
-    </div>
-
-    <div class="seccion-titulo">Proyectos relacionados</div>
-    <div class="extras-grid">
-      ${proyectosHTML}
-    </div>
+    </section>
   `;
 }
 
