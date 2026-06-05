@@ -170,7 +170,12 @@ function closeModal() {
 function renderArteConceptual() {
   const arteHTML = EXTRAS.arteConceptual.map(a => `
    <div class="galeria-concepts">
-      <img src="${a.img}" alt="Arte conceptual">
+      <img
+  src="${a.img}"
+  alt="Arte conceptual"
+  onclick="abrirZoom('${a.img}', 'Arte conceptual')"
+  style="cursor:pointer"
+>
     </div>
   `).join('');
 
