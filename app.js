@@ -220,42 +220,71 @@ function renderLector(comicId) {
   return buildLectorHTML(comic);
 }
 
+function obtenerNumeroPaginaGlobal(comic, index) {
+  let numero = index + 1;
+
+  for (const c of COMICS) {
+    if (c.id === comic.id) break;
+    numero += (c.paginas || []).length;
+  }
+
+  return numero;
+}
+
 function buildLectorHTML(comic) {
+  const anterior = COMICS.find(c => c.id === comic.id - 1);
+  const siguiente = COMICS.find(c => c.id === comic.id + 1);
+
   const contenidoHTML = (comic.paginas || []).map((pagina, index) => {
+    const numeroGlobal = obtenerNumeroPaginaGlobal(comic, index);
+
     const multimediaDespues = (comic.multimedia || [])
       .filter(m => m.despuesDePagina === index + 1)
       .map(m => renderMultimedia(m))
       .join('');
 
     return `
-      <div class="pagina-comic" style="margin-bottom:2rem;">
+      <div class="pagina-comic" style="margin-bottom:3rem; text-align:center;">
+        <button class="btn-zoom" onclick="abrirZoom('${pagina}', '${comic.titulo} página ${numeroGlobal}')">
+          🔍 Ver en grande
+        </button>
+
         <img
           src="${pagina}"
-          alt="${comic.titulo} página ${index + 1}"
+          alt="${comic.titulo} página ${numeroGlobal}"
+          loading="lazy"
           style="
             width:100%;
             border-radius:18px;
             display:block;
+            margin:0 auto;
           "
         >
+
+        <div class="page-number">
+          ♡ Página ${numeroGlobal} ♡
+        </div>
       </div>
 
       ${multimediaDespues}
     `;
   }).join('');
 
-  const siguiente = COMICS.find(c => c.id === comic.id + 1);
+  const botonesCapitulo = `
+    <div class="lector-nav-botones">
+      ${anterior ? `
+        <button class="btn-modo" onclick="navegarA('lector', ${anterior.id})">
+          ← Capítulo anterior
+        </button>
+      ` : `
+        <button class="btn-modo" onclick="navegarA('home')">
+          ← Índice
+        </button>
+      `}
 
-  return `
-    <div class="lector-header">
-      <div class="lector-titulo-wrap">
-        <button class="lector-home-btn" onclick="navegarA('home')">🏠</button>
-
-        <div>
-          <div class="lector-titulo">${comic.capitulo}</div>
-          <div class="lector-subtitulo">${comic.titulo}</div>
-        </div>
-      </div>
+      <button class="btn-modo" onclick="navegarA('home')">
+        🏠 Índice
+      </button>
 
       ${siguiente ? `
         <button class="btn-modo" onclick="navegarA('lector', ${siguiente.id})">
@@ -267,6 +296,21 @@ function buildLectorHTML(comic) {
         </button>
       `}
     </div>
+  `;
+
+  return `
+    <div class="lector-header">
+      <div class="lector-titulo-wrap">
+        <button class="lector-home-btn" onclick="navegarA('home')">🏠</button>
+
+        <div>
+          <div class="lector-titulo">${comic.capitulo}</div>
+          <div class="lector-subtitulo">${comic.titulo}</div>
+        </div>
+      </div>
+    </div>
+
+    ${botonesCapitulo}
 
     <div
       id="lector-contenido"
@@ -283,7 +327,31 @@ function buildLectorHTML(comic) {
         </div>
       `}
     </div>
+
+    ${botonesCapitulo}
+
+    <div id="zoom-modal" class="zoom-modal" onclick="cerrarZoom()">
+      <button class="zoom-close" onclick="cerrarZoom()">✕</button>
+      <img id="zoom-img" src="" alt="">
+    </div>
   `;
+}
+
+function abrirZoom(src, alt) {
+  const modal = document.getElementById('zoom-modal');
+  const img = document.getElementById('zoom-img');
+
+  if (!modal || !img) return;
+
+  img.src = src;
+  img.alt = alt;
+  modal.classList.add('open');
+}
+
+function cerrarZoom() {
+  const modal = document.getElementById('zoom-modal');
+  if (!modal) return;
+  modal.classList.remove('open');
 }
 
 function renderMultimedia(m) {
