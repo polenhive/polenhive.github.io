@@ -156,22 +156,25 @@ Y aunque parecía el tipo de momento que rompería cualquier posibilidad de amis
 
 const EXTRAS = {
   arteConceptual: [
-    {
-      titulo: "Arte conceptual 1",
-      img: "img/concept-01.jpg",
-      descripcion: "Primer vistazo al mundo visual de Nuevo Tigre."
-    },
-    {
-      titulo: "Arte conceptual 2",
-      img: "img/concept-02.jpg",
-      descripcion: "Exploración de personajes, props o escenarios."
-    },
-    {
-      titulo: "Arte conceptual 3",
-      img: "img/concept-03.jpg",
-      descripcion: "Material extra del desarrollo visual."
-    }
-  ],
+  { img: "img/concept-art/01.jpg" },
+  { img: "img/concept-art/02.jpg" },
+  { img: "img/concept-art/03.jpg" },
+  { img: "img/concept-art/04.jpg" },
+  { img: "img/concept-art/05.jpg" },
+  { img: "img/concept-art/06.jpg" },
+  { img: "img/concept-art/07.jpg" },
+  { img: "img/concept-art/08.jpg" },
+  { img: "img/concept-art/09.jpg" },
+  { img: "img/concept-art/10.jpg" },
+  { img: "img/concept-art/11.jpg" },
+  { img: "img/concept-art/12.jpg" },
+  { img: "img/concept-art/13.jpg" },
+  { img: "img/concept-art/14.jpg" },
+  { img: "img/concept-art/15.jpg" },
+  { img: "img/concept-art/16.jpg" },
+  { img: "img/concept-art/17.jpg" },
+  { img: "img/concept-art/18.jpg" }
+],
   autora: {
     nombre: "Paula Reynoso",
     usuario: "@polenhive",
