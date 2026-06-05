@@ -70,7 +70,10 @@ const COMICS = [
       "img/oda-al-portero/03.jpg",
       "img/oda-al-portero/04.jpg",
       "img/oda-al-portero/05.jpg",
-      "img/oda-al-portero/06.jpg"
+      "img/oda-al-portero/06.jpg",
+      "img/oda-al-portero/07.jpg",
+      "img/oda-al-portero/08.jpg",
+      "img/oda-al-portero/09.jpg"
     ],
     multimedia: []
   }
