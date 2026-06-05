@@ -1362,3 +1362,43 @@ body {
   font-size: 22px;
   cursor: pointer;
 }
+.galeria-concepts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.galeria-concepts .extra-card {
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+}
+
+.galeria-concepts .extra-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  transition: transform .2s ease;
+}
+
+.galeria-concepts .extra-card img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 900px) {
+  .galeria-concepts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .galeria-concepts {
+    grid-template-columns: 1fr;
+  }
+}
