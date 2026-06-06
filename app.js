@@ -167,15 +167,19 @@ function closeModal() {
 // ARTE CONCEPTUAL
 // ================================================
 
+// ================================================
+// ARTE CONCEPTUAL
+// ================================================
+
 function renderArteConceptual() {
   const arteHTML = EXTRAS.arteConceptual.map(a => `
-   <div class="galeria-concepts">
+    <div class="extra-card">
       <img
-  src="${a.img}"
-  alt="Arte conceptual"
-  onclick="abrirZoom('${a.img}', 'Arte conceptual')"
-  style="cursor:pointer"
->
+        src="${a.img}"
+        alt="Arte conceptual"
+        onclick="abrirZoom('${a.img}', 'Arte conceptual')"
+        style="cursor:pointer"
+      >
     </div>
   `).join('');
 
@@ -185,17 +189,22 @@ function renderArteConceptual() {
       <p>Galería de desarrollo visual de Todos Los Gatos Son Pardos.</p>
     </div>
 
-    <div class="extras-grid">
+    <div class="galeria-concepts">
       ${arteHTML}
+    </div>
+
+    <div id="zoom-modal" class="zoom-modal" onclick="cerrarZoom()">
+      <button class="zoom-close" onclick="cerrarZoom()">✕</button>
+      <img id="zoom-img" src="" alt="">
     </div>
   `;
 }
+
 // ================================================
 // SOBRE EL PROYECTO
 // ================================================
 
 function renderSobreProyecto() {
- function renderSobreProyecto() {
   return `
     <div class="hero">
       <h1>💌 Sobre el Proyecto 💌</h1>
@@ -203,7 +212,11 @@ function renderSobreProyecto() {
     </div>
 
     <section class="about-video-section">
-      <h2>🎥 ¿Por qué hice este proyecto?</h2>
+      <h2>🐱 ¿De dónde nace Todos Los Gatos Son Pardos?</h2>
+
+      <p class="about-intro">
+        Un videoblog sobre cómo nació el proyecto, de dónde viene su historia y por qué quería convertirlo en un webcomic.
+      </p>
 
       <video controls class="about-video">
         <source src="img/sobre-video.mp4" type="video/mp4">
