@@ -140,7 +140,7 @@ Y aunque parecía el tipo de momento que rompería cualquier posibilidad de amis
     subtitulo: "El NepoKitty Presidencial",
     img: "img/Maximo.png",
     facts: [
-      "Edad: 22",
+      "Edad: 24",
       "Ocupación: Candidato a la presidencia municipal de Nuevo Tigre",
       "Horóscopo: Leo",
       "Cumpleaños: 16 de agosto",
@@ -180,7 +180,7 @@ const EXTRAS = {
     usuario: "@polenhive",
     email: "polenhive@hotmail.com",
     linkedin: "www.linkedin.com/in/polenhive",
-    texto: "Todos Los Gatos Son Pardos nace como un webcomic sobre drama, amistad, clase social, música, política pop y chicas intentando sobrevivir a Nuevo Tigre con estilo."
+    texto: "Todos Los Gatos Son Pardos nace desde mi necesidad de expresar la experiencia de ser una mujer jovén en el México contemporaneo, explorando temas como la misoginía, la sobreexplotación en la industría del pop, la impunidad politica, la amistad femenina, y dos que tres criticas sociales. Espero lo disfruten. Puse todo mi corazón y mi alma en este proyecto"
   },
   proyectosSimilares: [
     {
